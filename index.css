@@ -1,0 +1,67 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: white;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* common styles for display and keys */
+.cell {
+	margin-top: 0.25rem;
+	margin-left: 0.25rem;
+	border: solid black 1px;
+	border-radius: 4px;
+}
+
+.row>.cell:last-child {
+	margin-right: 0.25rem;
+}
+
+.col>.cell:last-child {
+	margin-bottom: 0.25rem;
+}
+
+
+
+#calc {
+	width: 17.25rem;
+}
+
+#top {
+	width: 100%;
+	margin-bottom: 0.25rem;
+}
+
+#display {
+	height: 4rem;
+	flex-grow: 1;
+	background-color: #a52f2f;
+	/* text settings */
+	line-height: 4rem;
+	text-align: right;
+	font-size: 3rem;
+}
+
+.key {
+	height: 4rem;
+	width: 4rem;
+	background-color: #4b4b4b;
+	/* text settings */
+	line-height: 4rem;
+	text-align: center;
+	font-size: 1.7rem;
+}
+
+.clear-key {
+	background-color: #df5900;
+}
