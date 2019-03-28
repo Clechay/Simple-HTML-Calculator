@@ -1,10 +1,11 @@
 ## plan na zajęcia
-* wyrenderować status
-* obsłużyć eventy z klawiatury
-* obsłużyć kliknięcia myszą
-* obsłużyć wybór operacji
-* obsłużyć wybór operandy
-* wykonać obliczenia
+
+- [x] wyrenderować status
+- [x] obsłużyć eventy z klawiatury
+- [x] obsłużyć kliknięcia myszą
+- [ ] obsłużyć wybór operacji
+- [ ] obsłużyć wybór operandy
+- [ ] wykonać obliczenia
 
 ## zadania dodatkowe
 * dodać Backspace
