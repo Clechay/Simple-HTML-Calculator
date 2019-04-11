@@ -4,7 +4,7 @@ function onLoad() {
 	let operation = ""; // operacja matematyczna do wykonania
 	let operanda = "";  // druga z wybranych liczb
 	const operations = new Map();
-	
+
 	operations.set("+",()=>state = (Number(state) + Number(operanda)).toString())
 	operations.set("-",()=>state = (Number(state) - Number(operanda)).toString())
 	operations.set("*",()=>state = (Number(state) * Number(operanda)).toString())
@@ -14,6 +14,11 @@ function onLoad() {
 		if(operanda !== "") display.innerHTML = operanda;
 		else if(operation !== "") display.innerHTML = operation;
 		else display.innerHTML = state;
+	}
+	const calculate = () => {
+		operations.get(operation)();
+		operation = "";
+		operanda = "";
 	}
 	const handle = (key) => {
 		if (operation === "" && !isNaN(Number(state + key))) {
@@ -32,12 +37,13 @@ function onLoad() {
 			if(state==="") state="0";
 		}
 		else if(["-","+","*","/"].includes(key)){
+			if(operanda !== ""){
+				calculate();
+			}
 			operation = key;
 		}
 		else if (["=","Enter"].includes(key)){
-			operations.get(operation)();
-			operation = "";
-			operanda = "";
+			calculate();
 		}
 		if (state !== '0' && state[0] === '0' && !['.', ','].includes(state[1])) {
 			state = state.slice(1);
