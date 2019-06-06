@@ -1,3 +1,5 @@
+[live demo](https://clechay.github.io/Simple-HTML-Calculator/index.html)
+
 ## plan na zajęcia
 
 - [x] wyrenderować status
